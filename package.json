@@ -25,7 +25,7 @@
     "build:dev": "webpack",
     "buid:prod": "NODE_ENV=production webpack",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -c .storybook -o .out"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.11",
