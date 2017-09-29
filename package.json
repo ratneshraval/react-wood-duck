@@ -23,9 +23,14 @@
     "test": "karma start --single-run",
     "test-watch": "karma start",
     "build:dev": "webpack",
-    "buid:prod": "NODE_ENV=production webpack"
+    "buid:prod": "NODE_ENV=production webpack",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.11",
+    "@storybook/addon-links": "^3.2.10",
+    "@storybook/react": "^3.2.11",
     "babel-cli": "^6.6.4",
     "babel-core": "^6.7.4",
     "babel-eslint": "^6.0.2",
@@ -36,9 +41,11 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-2": "^6.5.0",
     "chai": "^3.5.0",
+    "css-loader": "^0.28.7",
     "eslint": "^2.7.0",
     "eslint-plugin-babel": "^3.1.0",
     "eslint-plugin-react": "^4.2.3",
+    "file-loader": "^1.1.0",
     "jasmine": "^2.7.0",
     "jasmine-core": "^2.7.0",
     "jsdom": "^8.1.0",
@@ -56,6 +63,7 @@
     "react-test-renderer": "^15.6.1",
     "sinon": "^1.17.3",
     "source-map-loader": "^0.2.1",
+    "style-loader": "^0.18.2",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
   },
