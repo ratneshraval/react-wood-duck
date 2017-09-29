@@ -92,7 +92,7 @@ storiesOf('DropDownField', module)
       options={['Mickey Mouse', 'Minnie Mouse', 'Goofy']}
       selectedOption=""
       handleOnChange={() => undefined}
-      placeholder="Choose Characeter"
+      placeholder="Choose Character"
     />
   ));
 
