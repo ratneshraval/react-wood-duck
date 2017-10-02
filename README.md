@@ -48,7 +48,7 @@ Now, you can import the components from the library into the application:
 
 	@import {component-name} from 'react-wood-duck'
 
-You can also import the styles from `react-wood-duck` from `dist/styles` folder where you have compiled styles in both SCSS and CSS format.
+You can also import the corresponding styles from `react-wood-duck` from `dist/styles` folder where you have compiled styles in both SCSS and CSS format.
 
 ## Development
 #### (src, dist)
