@@ -33,7 +33,7 @@ class GlobalHeader extends React.Component {
                                     <span className="divider"/>
                                 </li>
                                 <li>
-                                    <p className="profile"> <a href= "#">{profileName}</a></p>
+                                    <p className="profile"> <a href="#">{profileName}</a></p>
                                 </li>
                                 <li>
                                     <div className="profile-avatar">{profileAvatar}</div>
