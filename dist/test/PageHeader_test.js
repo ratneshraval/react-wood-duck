@@ -45,22 +45,21 @@
         });
 
         it('find element with tag', function () {
-            var divElm = _ReactTestUtils2.default.scryRenderedDOMComponentsWithTag(pageHeader, 'div');
-            expect(divElm.length).toEqual(5);
-            var btnElm = _ReactTestUtils2.default.scryRenderedDOMComponentsWithTag(pageHeader, 'button');
-            expect(btnElm.length).toEqual(1);
+            var divElement = _ReactTestUtils2.default.scryRenderedDOMComponentsWithTag(pageHeader, 'div');
+            expect(divElement.length).toEqual(5);
+            var buttonElement = _ReactTestUtils2.default.scryRenderedDOMComponentsWithTag(pageHeader, 'button');
+            expect(buttonElement.length).toEqual(1);
         });
 
         it('find element with class and default props', function () {
-            var divElmArr = _ReactTestUtils2.default.scryRenderedDOMComponentsWithClass(pageHeader, 'row');
-            expect(divElmArr.length).toEqual(1);
-            // findRenderedDOMComponentsWithClass
-            var divtElm1 = _ReactTestUtils2.default.findRenderedDOMComponentWithClass(pageHeader, 'page-title text-left');
-            expect(divtElm1.className).toBe('page-title text-left');
-            expect(divtElm1.textContent).toEqual('CaseName');
-            var btnElm1 = _ReactTestUtils2.default.findRenderedDOMComponentWithClass(pageHeader, 'primary-btn pull-right');
-            expect(btnElm1.className).toBe('primary-btn pull-right');
-            expect(btnElm1.textContent).toEqual('Save Form');
+            var divElementArr = _ReactTestUtils2.default.scryRenderedDOMComponentsWithClass(pageHeader, 'row');
+            expect(divElementArr.length).toEqual(1);
+            var divElement1 = _ReactTestUtils2.default.findRenderedDOMComponentWithClass(pageHeader, 'page-title text-left');
+            expect(divElement1.className).toBe('page-title text-left');
+            expect(divElement1.textContent).toEqual('CaseName');
+            var buttonElement1 = _ReactTestUtils2.default.findRenderedDOMComponentWithClass(pageHeader, 'primary-btn pull-right');
+            expect(buttonElement1.className).toBe('primary-btn pull-right');
+            expect(buttonElement1.textContent).toEqual('Save Form');
         });
 
         it('check default props', function () {
@@ -68,9 +67,9 @@
         });
 
         it('find element with class and object passed as props', function () {
-            var divtElm1 = _ReactTestUtils2.default.findRenderedDOMComponentWithClass(pageHeaderwithProps, 'page-title text-left');
-            expect(divtElm1.className).toBe('page-title text-left');
-            expect(divtElm1.textContent).toEqual('testPageTitle');
+            var divElement1 = _ReactTestUtils2.default.findRenderedDOMComponentWithClass(pageHeaderwithProps, 'page-title text-left');
+            expect(divElement1.className).toBe('page-title text-left');
+            expect(divElement1.textContent).toEqual('testPageTitle');
         });
     });
 });

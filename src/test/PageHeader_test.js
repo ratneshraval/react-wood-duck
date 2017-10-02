@@ -22,22 +22,21 @@ describe('PageHeader', function() {
     })
 
     it('find element with tag', function() {
-        let divElm = TestUtils.scryRenderedDOMComponentsWithTag(pageHeader, 'div');
-        expect(divElm.length).toEqual(5);
-        let btnElm = TestUtils.scryRenderedDOMComponentsWithTag(pageHeader, 'button');
-        expect(btnElm.length).toEqual(1);
+        let divElement = TestUtils.scryRenderedDOMComponentsWithTag(pageHeader, 'div');
+        expect(divElement.length).toEqual(5);
+        let buttonElement = TestUtils.scryRenderedDOMComponentsWithTag(pageHeader, 'button');
+        expect(buttonElement.length).toEqual(1);
     });
 
     it('find element with class and default props', function () {
-        let divElmArr = TestUtils.scryRenderedDOMComponentsWithClass(pageHeader, 'row');
-        expect(divElmArr.length).toEqual(1);
-        // findRenderedDOMComponentsWithClass
-        var divtElm1 = TestUtils.findRenderedDOMComponentWithClass(pageHeader, 'page-title text-left');
-        expect(divtElm1.className). toBe('page-title text-left')
-        expect(divtElm1.textContent).toEqual('CaseName');
-        var btnElm1 = TestUtils.findRenderedDOMComponentWithClass(pageHeader, 'primary-btn pull-right');
-        expect(btnElm1.className). toBe('primary-btn pull-right')
-        expect(btnElm1.textContent).toEqual('Save Form');
+        let divElementArr = TestUtils.scryRenderedDOMComponentsWithClass(pageHeader, 'row');
+        expect(divElementArr.length).toEqual(1);
+        var divElement1 = TestUtils.findRenderedDOMComponentWithClass(pageHeader, 'page-title text-left');
+        expect(divElement1.className). toBe('page-title text-left')
+        expect(divElement1.textContent).toEqual('CaseName');
+        var buttonElement1 = TestUtils.findRenderedDOMComponentWithClass(pageHeader, 'primary-btn pull-right');
+        expect(buttonElement1.className). toBe('primary-btn pull-right')
+        expect(buttonElement1.textContent).toEqual('Save Form');
 
     });
 
@@ -46,9 +45,9 @@ describe('PageHeader', function() {
     });
     
     it('find element with class and object passed as props', function () {
-        var divtElm1 = TestUtils.findRenderedDOMComponentWithClass(pageHeaderwithProps, 'page-title text-left');
-        expect(divtElm1.className). toBe('page-title text-left')
-        expect(divtElm1.textContent).toEqual('testPageTitle');
+        var divElement1 = TestUtils.findRenderedDOMComponentWithClass(pageHeaderwithProps, 'page-title text-left');
+        expect(divElement1.className). toBe('page-title text-left')
+        expect(divElement1.textContent).toEqual('testPageTitle');
 
     });
 })

@@ -101,13 +101,11 @@
     }, {
       key: 'handleScroll',
       value: function handleScroll() {
-        var el = document.querySelector('.pageHeader');
+        var element = document.querySelector('.pageHeader');
         var pageY = window.scrollY;
-        if (pageY !== 0 && el.getBoundingClientRect().bottom > 100) {
-          console.log(el.getBoundingClientRect().bottom + 'bottom');
+        if (pageY !== 0 && element.getBoundingClientRect().bottom > 100) {
           this.setState({ stickyHeader: true });
         } else if (pageY === 0) {
-          console.log('top');
           this.setState({ stickyHeader: false });
         }
       }
