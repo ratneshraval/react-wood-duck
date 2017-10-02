@@ -2,18 +2,17 @@ import React from 'react';
 import Alert from '../Alert.js';
 import TestUtils from 'react-dom/lib/ReactTestUtils';
 
-describe('Alert', function()
-{
-	const renderedComp = TestUtils.createRenderer()
-	const compRendered = renderedComp.render(<Alert />)
-	const result_tag = renderedComp.getRenderOutput()
+describe('Alert', function() {
 
-	it('renders the tag', function() {
-		expect(result_tag.type).toBe('div')
-	})
+    const renderedComp = TestUtils.createRenderer()
+    const compRendered = renderedComp.render(<Alert />)
+    const resultTag = renderedComp.getRenderOutput()
 
-	it('verify the className', function(){
-		expect(result_tag.props.className). toBe('row')
-	})
+    it('renders the tag', function() {
+        expect(resultTag.type).toBe('div')
+    })
 
+    it('verify the className', function() {
+        expect(resultTag.props.className). toBe('row')
+    })
 })
