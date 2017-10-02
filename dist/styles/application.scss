@@ -3400,3 +3400,37 @@ header {
     flex: 0 0 15%;
     padding: 0.313em;
     text-align: center; }
+
+/***
+ PAGE HEADER STYLING
+***/
+.pageHeader {
+  padding: 1.563em;
+  background: #065A67;
+  background: -webkit-linear-gradient(left, #072D47 0%, #0C4E78 10%, #087B8E 90%, #065A67 100%);
+  background: -o-linear-gradient(left, #072D47 0%, #0C4E78 10%, #087B8E 90%, #065A67 100%);
+  background: -moz-linear-gradient(left, #072D47 0%, #0C4E78 10%, #087B8E 90%, #065A67 100%);
+  background: linear-gradient(to right, #072D47 0%, #0C4E78 10%, #087B8E 90%, #065A67 100%);
+  position: fixed;
+  width: 100%;
+  transition: top .2s ease;
+  z-index: 1; }
+
+.page-title {
+  font-size: 26pt;
+  color: #fff; }
+
+.primary-btn {
+  min-height: 2.500em;
+  border: 2px solid #fff;
+  border-radius: 0.125em;
+  min-width: 6.250em;
+  background: transparent;
+  font-size: 16pt;
+  color: #fff;
+  cursor: pointer; }
+
+.main {
+  margin-top: 6em; }
+
+/** ENDS **/

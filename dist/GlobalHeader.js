@@ -135,8 +135,7 @@
                                         _react2.default.createElement(
                                             'a',
                                             { role: 'search', 'aria-search': 'search', href: '#' },
-                                            searchIcon,
-                                            ' '
+                                            searchIcon
                                         )
                                     ),
                                     _react2.default.createElement(
@@ -145,8 +144,7 @@
                                         _react2.default.createElement(
                                             'a',
                                             { 'aria-add': 'add', href: '#' },
-                                            addIcon,
-                                            ' '
+                                            addIcon
                                         )
                                     ),
                                     _react2.default.createElement(
@@ -174,8 +172,7 @@
                                                 'a',
                                                 { href: '#' },
                                                 profileName
-                                            ),
-                                            ' '
+                                            )
                                         )
                                     ),
                                     _react2.default.createElement(
