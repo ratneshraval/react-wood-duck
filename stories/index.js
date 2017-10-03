@@ -25,6 +25,22 @@ import TextArea from '../src/TextArea';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../dist/styles/application.css';
 
+const inputName = (
+  <InputComponent
+    label="Name"
+    type="text"
+    gridClassName="col-md-4 col-sm-6 col-xs-12"
+  />
+);
+const inputPhone = (
+  <InputComponent
+    label="Phone Number"
+    type="number"
+    gridClassName="col-md-4 col-sm-6 col-xs-12"
+  />
+);
+const clearfix = <div className="clearfix" />;
+
 storiesOf('CWDS Asset Library', module)
   .add('About', About);
 
@@ -57,27 +73,29 @@ storiesOf('Button', module)
   .add('Button Warning', () => (
     <Button btnClassName="warning" btnName="Update Changes" />
   ))
-  .add('Button Danger', () => (
-    <Button btnClassName="danger" btnName="Delete changes" />
+  .add('Button Disabled', () => (
+    <Button btnClassName="primary" btnName="Delete changes" disabled="true" />
   ));
 
-storiesOf('Card', module).add('Default', () => (
-  <Cards
-    cardHeaderText="Title"
-    children="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  />
-));
+storiesOf('Card', module)
+  .add('Default', () => (
+    <Cards
+      cardHeaderText="Title"
+      children="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    />
+  ));
 
-storiesOf('CheckboxRadioGroup', module).add('Default', () => (
-  <CheckboxRadioGroup
-    label="Characters"
-    type={"checkbox"}
-    name="Category"
-    options={['Mickey Mouse', 'Minnie Mouse', 'Goofy']}
-    selectedOptions={[]}
-    handleOnChange={e => this.setSate({ value: e.target.value })}
-  />
-));
+storiesOf('CheckboxRadioGroup', module)
+  .add('Default', () => (
+    <CheckboxRadioGroup
+      label="Characters"
+      type={"checkbox"}
+      name="Category"
+      options={['Mickey Mouse', 'Minnie Mouse', 'Goofy']}
+      selectedOptions={[]}
+      handleOnChange={e => this.setSate({ value: e.target.value })}
+    />
+  ));
 
 storiesOf('DatePicker', module)
   .add('Default', () => <DatePicker />);
@@ -105,7 +123,7 @@ storiesOf('InputComponent', module)
 storiesOf('ListItem', module)
   .add('Default', () => (
     <div>
-      <ListItem />
+      <ListItem children={[inputName, inputPhone, clearfix]} />
     </div>
   ));
 
@@ -123,7 +141,7 @@ storiesOf('TextArea', module)
     <TextArea
       label="Example"
       name="Text Area"
-      handleOnChange={() => console.log('Click')}
+      handleOnChange={e => this.setSate({ value: e.target.value })}
       rows={5}
       placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       value=""
