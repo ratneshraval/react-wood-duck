@@ -109,7 +109,7 @@ storiesOf('DropDownField', module)
       name="Characters"
       options={['Mickey Mouse', 'Minnie Mouse', 'Goofy']}
       selectedOption=""
-      handleOnChange={() => undefined}
+      handleOnChange={e => this.setSate({ value: e.target.value })}
       placeholder="Choose Character"
     />
   ));
