@@ -27,5 +27,5 @@ module.exports = {
 	DateTimePicker,
 	ReactDatePicker,
 	MultiSelect,
-	GlobalHeader,
+	GlobalHeader
 };
